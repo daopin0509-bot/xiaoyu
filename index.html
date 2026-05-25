@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Goldfish Pond - Canvas 2D</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <canvas id="pond" aria-label="Interactive fish pond"></canvas>
+    <section class="hud">
+      <h1>Goldfish Pond</h1>
+      <p>点击或触摸投喂，观察鱼群追食。</p>
+      <p id="metrics">FPS: -- | Fish: -- | Food: --</p>
+    </section>
+    <aside class="control-panel" id="controlPanel">
+      <div class="control-panel-header">
+        <h2>参数面板</h2>
+        <button id="togglePanel" type="button" class="toggle-btn">收起</button>
+      </div>
+      <div class="control-panel-body" id="controlPanelBody">
+        <label>鱼数量 <span id="fishCountValue"></span>
+          <input id="fishCount" type="range" min="6" max="120" step="1" />
+        </label>
+        <label>最小速度 <span id="minSpeedValue"></span>
+          <input id="minSpeed" type="range" min="8" max="80" step="1" />
+        </label>
+        <label>最大速度 <span id="maxSpeedValue"></span>
+          <input id="maxSpeed" type="range" min="20" max="160" step="1" />
+        </label>
+        <label>追食加速 <span id="chaseBoostValue"></span>
+          <input id="chaseBoost" type="range" min="0" max="120" step="1" />
+        </label>
+        <label>感知半径 <span id="senseRadiusValue"></span>
+          <input id="senseRadius" type="range" min="40" max="420" step="1" />
+        </label>
+        <label>边界缓冲 <span id="boundaryPaddingValue"></span>
+          <input id="boundaryPadding" type="range" min="8" max="160" step="1" />
+        </label>
+        <label>分离权重 <span id="separationWeightValue"></span>
+          <input id="separationWeight" type="range" min="0" max="2.4" step="0.01" />
+        </label>
+        <label>对齐权重 <span id="alignmentWeightValue"></span>
+          <input id="alignmentWeight" type="range" min="0" max="2.4" step="0.01" />
+        </label>
+        <label>聚合权重 <span id="cohesionWeightValue"></span>
+          <input id="cohesionWeight" type="range" min="0" max="2.4" step="0.01" />
+        </label>
+        <label>水波持续 <span id="rippleLifeValue"></span>
+          <input id="rippleLife" type="range" min="0.2" max="3" step="0.01" />
+        </label>
+        <label>荷叶吸引 <span id="lilyAttractWeightValue"></span>
+          <input id="lilyAttractWeight" type="range" min="0" max="1.6" step="0.01" />
+        </label>
+        <label>回游半径 <span id="lilyHomeRadiusFactorValue"></span>
+          <input id="lilyHomeRadiusFactor" type="range" min="1.5" max="5.5" step="0.1" />
+        </label>
+        <label>回游强度 <span id="lilyReturnWeightValue"></span>
+          <input id="lilyReturnWeight" type="range" min="0" max="1.8" step="0.01" />
+        </label>
+      </div>
+    </aside>
+  </main>
+  <script src="./main.js"></script>
+</body>
+</html>
